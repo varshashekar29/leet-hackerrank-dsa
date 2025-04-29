@@ -19,7 +19,18 @@ Flexible
     Runs on all major platforms (Windows, macOS, Linux)
     Easy to embed in other apps or extend with C/C++
 
-📌 How Python Runs Code
+📌 How Python Runs Code?
+        I have a source code which I save with a .py extension. When I run the code, Python first compiles the source code into bytecode. This bytecode is then sent to the interpreter, where the Python Virtual Machine (PVM) reads and executes the bytecode line by line. After interpretation, the PVM directly executes the instructions and gives the output (it does not convert it back into high-level language). Therefore, in Python, compilation to bytecode and interpretation happen automatically, and we directly get the result.
+
+🔍 Even though Python compiles code, Python is still called an interpreted language?
+    ✔ Python does compile your .py code into bytecode (.pyc) → this happens automatically behind the scenes.
+    ✔ But the bytecode is not the final output.
+    It’s just an intermediate step.
+    ✔ The real work — reading the bytecode and running it line by line — is done by the interpreter (PVM).
+    🎯Even if compilation happens, what matters is how the program runs.
+      If it runs through an interpreter, the language is considered interpreted.
+
+---------------------------------------------------------------------------------------------------------------------------
 
 1) Variable:- A variable is a named memory location which is used to store the values and the values can be changed n number of times during execution.
 
@@ -39,4 +50,44 @@ Type Change	        Not allowed (int cannot be string)	Allowed anytime
 Compilation	        Compiler checks errors early	    Runtime checks
 Memory Handling	    Variables hold memory address	    Variables reference objects
 
-    
+6)Difference between == vs is
+    == (Equality Operator):
+    What it does: Checks if two things are the same in value.
+    Example:
+        If you have two lists: [1, 2, 3] and [1, 2, 3], == checks if the values inside the lists are the same.
+        Result: True because the values are equal, even though they are different objects in memory.
+
+    is (Identity Operator):
+    What it does: Checks if two things are the exact same object in memory (if they are stored in the same place).
+    Example:
+    If you have two lists: [1, 2, 3] and [1, 2, 3], is checks if both lists are the same object.
+    Result: False because even though they have the same value, they are stored in different places in memory.
+
+    🎯== checks if values are equal (even if they are different objects) They can have different memory also.
+    is checks if they are the exact same object in memory if the memory is different they won't work.
+
+
+7)What is floor division?
+    It divides two numbers and rounds down the result to the nearest integer.
+
+8)When to use in and not in with strings?
+    in (checks if a substring exists):
+    What it does: Checks if a particular substring exists inside a string.
+    Return value: Returns True if the substring is found, otherwise returns False.
+
+    not in (checks if a substring does not exist):
+    What it does: Checks if a particular substring is not present in a string.
+    Return value: Returns True if the substring is not found, otherwise returns False.
+
+
+9)Why strings are immutable?
+
+    Strings are immutable in Python because once a string is created, you cannot change it. If you try to change a string, Python will create a new string instead of modifying the original one.
+
+    Why is this a good thing?
+        Memory Efficiency: Python can reuse the same string in different places without needing extra memory.
+
+        Performance: Since strings don’t change, it helps Python work faster and more efficiently, especially when searching for strings.
+
+        Safety: Immutability prevents accidental changes to strings, making your code safer and more predictable.
+
