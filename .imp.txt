@@ -91,3 +91,37 @@ Memory Handling	    Variables hold memory address	    Variables reference object
 
         Safety: Immutability prevents accidental changes to strings, making your code safer and more predictable.
 
+
+10)Difference between if-elif-else and if-else statements.
+    if-else Statement:
+        Used when you have only two choices — one condition to check, and one fallback.
+        If the if condition is True, it runs that block; otherwise, it runs the else block.
+
+    if-elif-else Statement:
+        Used when you have more than two conditions to check.
+        It checks conditions one by one from top to bottom.
+        As soon as one condition is True, it runs that block and skips the rest.
+
+11)How to use nested if conditions properly?
+    A nested if is an if statement inside another if block. It allows you to check more specific conditions only if the outer condition is true.
+
+12)Priority of conditions when checking multiple conditions.
+    1)In if-elif-else chains:
+        Python checks top to bottom. The first condition that is True is executed, and the rest are skipped.
+    2)Inside a single condition, operator precedence matters:
+        not → highest priority
+        and → medium priority
+        or → lowest priority
+    Use parentheses () to make conditions clearer.
+
+13)Short-circuiting (logical operators' behavior).
+    Short-Circuiting Summary:
+🔹 Short-circuiting happens when Python stops checking further conditions because the result is already known from the first condition.
+
+🔸 and Operator:
+Stops if first condition is False.
+Because False and anything is always False.
+🔸 or Operator:
+Stops if first condition is True.
+Because True or anything is always True.
+
