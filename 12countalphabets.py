@@ -15,3 +15,6 @@ for char in string:
 print("The total number of alphabets:",alphabet)
 print("The total number of digits:",digits)
 print("The total number of special_character:",special_character)
+
+
+

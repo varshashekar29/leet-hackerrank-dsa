@@ -20,7 +20,7 @@ Flexible
     Easy to embed in other apps or extend with C/C++
 
 📌 How Python Runs Code?
-        I have a source code which I save with a .py extension. When I run the code, Python first compiles the source code into bytecode. This bytecode is then sent to the interpreter, where the Python Virtual Machine (PVM) reads and executes the bytecode line by line. After interpretation, the PVM directly executes the instructions and gives the output (it does not convert it back into high-level language). Therefore, in Python, compilation to bytecode and interpretation happen automatically, and we directly get the result.
+        I have a source code which I save with a .py extension. When I run the code, Python first compiles the source code into bytecode. This bytecode is neither human understandable nor machine understandable, then sent to the interpreter, where the Python Virtual Machine (PVM) reads and executes the bytecode line by line. After interpretation, the PVM directly executes the instructions and gives the output (it does not convert it back into high-level language). Therefore, in Python, compilation to bytecode and interpretation happen automatically, and we directly get the result.
 
 🔍 Even though Python compiles code, Python is still called an interpreted language?
     ✔ Python does compile your .py code into bytecode (.pyc) → this happens automatically behind the scenes.
@@ -125,3 +125,55 @@ Because False and anything is always False.
 Stops if first condition is True.
 Because True or anything is always True.
 
+14)Difference between for and while loops.
+    ✅ For Loop
+        Used when number of iterations is known.
+        Iterates over a sequence (like list, string, range, etc.).
+        Cleaner and more readable for fixed repetitions.
+
+    ✅ While Loop
+        Used when number of iterations is unknown.
+        Runs as long as the condition is True.
+        Needs manual increment/update to avoid infinite loop.
+
+15)When to use break, continue, and pass.
+    ✅ break
+        Used to exit the loop immediately.
+        The rest of the loop will not execute.
+        Use it when:
+            You want to stop the loop when a certain condition is met.
+    
+    ✅ continue
+        Skips the current iteration and moves to the next one.
+        Use it when:
+            You want to ignore certain values but continue looping.
+        
+    ✅ pass
+        Does nothing.
+        Acts as a placeholder when a statement is required syntactically but you don’t want any code to run.    
+        Use it when:
+            You're planning to write code later or to create empty blocks.
+
+
+16)🎯 Summary: Real Use Cases of range() in Python
+✅ Looping fixed times – Use range(n) to repeat a task n times.
+✅ Index-based looping – Combine range() with len() to loop over list indexes.
+✅ Number sequences – Generate lists of numbers using list(range(...)).
+✅ Custom steps – Add a step in range(start, stop, step) to skip values.
+✅ Reversing – Use a negative step to count down (e.g., range(10, 0, -1)).
+✅ Games & logic – Apply range() for levels, turns, or countdowns in programs.
+
+17)✅ Summary: Infinite Loops in Python
+What is an infinite loop?
+A loop that never ends because its condition always remains True.
+
+Why does it happen?
+Condition is always True (e.g., while True)
+Loop variable is not updated
+Wrong condition logic
+
+How to avoid it?
+Update loop variables correctly
+Use proper exit conditions
+Use break if needed
+Test logic with print/debug
